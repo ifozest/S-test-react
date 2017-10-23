@@ -1,0 +1,25 @@
+html, body {
+  margin: 0;
+  padding: 0;
+  background: #e1662d;
+  font-family: 'monaco-regular', monospace;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+@font-face {
+  font-family: 'chi-townnf';
+  src: url('assets/fonts/chi-townnf.woff2') format('woff2'),
+  url('assets/fonts/chi-townnf.woff') format('woff'),
+  url('assets/fonts/chi-townnf.ttf') format('ttf');
+
+}
+
+@font-face {
+  font-family: 'monaco-regular';
+  src: url('assets/fonts/Monaco Regular.woff2') format('woff2'),
+  url('assets/fonts/Monaco Regular.woff') format('woff'),
+  url('assets/fonts/Monaco Regular.ttf') format('ttf');
+}

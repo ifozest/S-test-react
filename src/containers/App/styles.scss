@@ -1,0 +1,38 @@
+.container {
+  display: flex;
+  flex-flow: row wrap;
+  margin: 1rem 3rem 0;
+}
+
+.panel {
+  flex: 1 100%;
+  margin-bottom: 0.5rem;
+  &-header {
+    .panel-wrapper {
+      padding: 0;
+    }
+  }
+  &-filters {
+    margin-right: 0.5rem;
+  }
+  &-filters, &-vehicles {
+    flex: 1 auto;
+  }
+}
+
+@media all and (max-width:800px) {
+  .container {
+    margin: 1rem 0;
+  }
+}
+
+@media all and (max-width:700px) {
+  .panel {
+    min-width: 500px;
+    &-filters {
+      flex: 2 100%;
+      margin-right: 0;
+      margin-bottom: 0.5rem;
+    }
+  }
+}

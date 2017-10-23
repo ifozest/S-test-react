@@ -1,0 +1,27 @@
+.filter {
+  margin-bottom: 0.5rem;
+  &-label {
+    display: inline-block;
+    margin: 0;
+    font-size: 1.5rem;
+  }
+  &-select {
+    display: block;
+    width: 100%;
+    font-size: 1rem;
+    padding: .5rem .75rem;
+    color: #000;
+    background: #fff;
+    border: 0.1rem solid #000;
+    border-radius: 0;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    &:hover {
+      cursor: pointer;
+    }
+    &:disabled {
+      border-color: #c3c3c3;
+      background: #ececec;
+    }
+  }
+}

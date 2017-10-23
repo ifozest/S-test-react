@@ -1,0 +1,24 @@
+.item {
+  list-style: none;
+  background: #fff;
+  margin: 0 0 0.5rem 0;
+  padding: 0.5rem;
+  &-wrap {
+    display: flex;
+  }
+  &-image {
+    padding-right: 0.5rem;
+    img {
+      display: inline-block;
+      overflow: hidden;
+      vertical-align: middle;
+      border: 0.1rem solid #ececec;
+      border-radius: 3px;
+      height: 70px;
+      width: 100px;
+    }
+  }
+  &:hover {
+    background: #ececec;
+  }
+}
