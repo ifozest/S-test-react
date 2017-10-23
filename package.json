@@ -2,7 +2,8 @@
   "name": "S-test-react",
   "version": "0.0.1",
   "scripts": {
-    "start": "webpack",
+    "start": "webpack-dev-server --progress",
+    "build": "webpack",
     "eslint": "eslint ./src --ext=jsx --ext=js || true"
   },
   "dependencies": {
