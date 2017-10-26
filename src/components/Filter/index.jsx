@@ -5,7 +5,7 @@ import {} from './styles.scss';
 
 const propTypes = {
   label: PropTypes.string.isRequired,
-  value: PropTypes.string.isRequired,
+  value: PropTypes.string,
   disabled: PropTypes.bool,
   options: PropTypes.arrayOf(PropTypes.shape({
     value: PropTypes.string,
@@ -14,10 +14,11 @@ const propTypes = {
   onChange: PropTypes.func.isRequired,
   name: PropTypes.string.isRequired,
 };
+
 const defaultProps = {
   disabled: true,
+  value: '',
 };
-
 
 function Filter({
   label, value, disabled, options, onChange, name,
@@ -30,7 +31,7 @@ function Filter({
       <select
         className="filter-select"
         name={name}
-        value={value || ''}
+        value={value}
         disabled={disabled}
         onChange={onChange}
       >

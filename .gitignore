@@ -2,6 +2,10 @@
 /node_modules
 
 # production
-/build
+#/dist
 
+# test coverage
+/coverage
+
+# IDE
 .idea

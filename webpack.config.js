@@ -1,11 +1,10 @@
 const path = require('path');
 const webpack = require('webpack');
+const CleanWebpackPlugin = require('clean-webpack-plugin');
 const HtmlWebpackPlugin = require('html-webpack-plugin');
 const ExtractTextPlugin = require('extract-text-webpack-plugin');
 
-
 module.exports = {
-  devtool: 'eval-source-map',
   entry: {
     app: path.resolve('src/index.jsx'),
     vendor: ['react'],
@@ -17,16 +16,12 @@ module.exports = {
   module: {
     loaders: [
       {
-        test: /\.json$/,
-        loader: 'json-loader',
-        exclude: /node_modules/,
-      },
-      {
         test: /\.(js|jsx)?$/,
         exclude: /node_modules/,
         loader: 'babel-loader',
         query: {
           presets: ['es2015', 'react'],
+          plugins: [],
         },
       },
       {
@@ -57,6 +52,7 @@ module.exports = {
     extensions: ['.jsx', '.js', '.json'],
   },
   plugins: [
+    new CleanWebpackPlugin(['dist']),
     new HtmlWebpackPlugin({
       template: path.resolve('src/index.tmpl.html'),
     }),
@@ -64,17 +60,8 @@ module.exports = {
       name: 'vendor',
       minChunks: Infinity,
     }),
-    new webpack.HotModuleReplacementPlugin(),
     new ExtractTextPlugin('main.[hash].css', {
       allChunks: true,
     }),
   ],
-  devServer: {
-    contentBase: path.resolve('dist'),
-    compress: true,
-    port: 9000,
-    open: true,
-    inline: true,
-    hot: true,
-  },
 };

@@ -1,14 +1,13 @@
 import React from 'react';
 
-import * as trafficMeister from 'service/trafficMeister';
-
 import Header from 'components/Header';
 import Panel from 'components/Panel';
 import Filter from 'components/Filter';
 import ResultList from 'components/ItemList';
 import Loader from 'components/Loader';
-import ErrorBlock from 'components/ErrorBlock';
+import ErrorPanel from 'components/ErrorPanel';
 
+import * as trafficMeister from 'service/trafficMeister';
 import { getOptionsFor, getFilterBy, multiFilter } from 'utils';
 
 import {} from './styles.scss';
@@ -78,11 +77,7 @@ class App extends React.Component {
     }
 
     if (this.state.error) {
-      errorBlock = (
-        <Panel className="panel-error">
-          <ErrorBlock error={this.state.error} />
-        </Panel>
-      );
+      errorBlock = <ErrorPanel error={this.state.error} />;
     }
 
     const typeFilter = getFilterBy('type', this.state.filter.type);

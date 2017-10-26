@@ -5,7 +5,9 @@ import PropTypes from 'prop-types';
 import {} from './styles.scss';
 
 const propTypes = {
-  items: PropTypes.arrayOf(PropTypes.object).isRequired,
+  items: PropTypes.arrayOf(PropTypes.shape({
+    id: PropTypes.number.isRequired,
+  })).isRequired,
 };
 
 function ItemList({ items }) {

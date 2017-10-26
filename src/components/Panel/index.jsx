@@ -7,6 +7,7 @@ const propTypes = {
   children: PropTypes.node.isRequired,
   className: PropTypes.string,
 };
+
 const defaultProps = {
   className: '',
 };

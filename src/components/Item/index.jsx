@@ -5,10 +5,9 @@ import {} from './styles.scss';
 
 const propTypes = {
   item: PropTypes.shape({
-    id: PropTypes.number,
-    img: PropTypes.string,
-    brand: PropTypes.string,
-    colors: PropTypes.arrayOf(PropTypes.string),
+    id: PropTypes.number.isRequired,
+    img: PropTypes.string.isRequired,
+    brand: PropTypes.string.isRequired,
   }).isRequired,
 };
 
