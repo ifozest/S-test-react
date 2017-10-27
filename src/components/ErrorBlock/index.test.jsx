@@ -3,7 +3,7 @@ import { shallow } from 'enzyme';
 
 import ErrorPanel from './';
 
-describe('#components/ErrorPanel', () => {
+describe('#components/ErrorBlock', () => {
   it('should render without crashing', () => {
     const wrapper = shallow(<ErrorPanel />);
     expect(wrapper).toHaveLength(1);

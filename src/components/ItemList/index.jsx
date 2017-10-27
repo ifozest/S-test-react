@@ -2,7 +2,7 @@ import React from 'react';
 import Item from 'components/Item';
 import PropTypes from 'prop-types';
 
-import {} from './styles.scss';
+import './styles.scss';
 
 const propTypes = {
   items: PropTypes.arrayOf(PropTypes.shape({

@@ -49,7 +49,7 @@ module.exports = {
       path.resolve('src'),
       'node_modules',
     ],
-    extensions: ['.jsx', '.js', '.json'],
+    extensions: ['.jsx', '.js'],
   },
   plugins: [
     new CleanWebpackPlugin(['dist']),

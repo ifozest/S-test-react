@@ -1,7 +1,14 @@
 import React from 'react';
 import { render } from 'react-dom';
-import App from 'containers/App';
+import { Provider } from 'react-redux';
+import AppContainer from 'containers/AppContainer';
+import store from 'store';
 
-import {} from './styles.scss';
+import './styles.scss';
 
-render(<App />, document.getElementById('root'));
+render(
+  <Provider store={store}>
+    <AppContainer />
+  </Provider>,
+  document.getElementById('root'),
+);
